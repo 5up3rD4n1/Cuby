@@ -148,7 +148,7 @@ funcion_principal
 	;
 
 programa
-	: definir_funcion* funcion_principal
+	: definir_funcion* funcion_principal EOF
 	;
 
 
@@ -166,11 +166,16 @@ PUNTO 	    : '.' ;
 DOBLEPUNTO  : '..';
 
 
+// Delimitador
+
+DELIMITADOR_BLOQUE: '|';
+
+
 //Operaciones
 
 OP_NEGACION : '~' ;
-OP_AND      : '&&';
-OP_OR       : '||';
+OP_AND      : '%%';
+OP_OR       : '$$';
 
 OP_IGUALQUE     : '==';
 OP_DIFERENTEQUE : '!=';
@@ -201,26 +206,7 @@ OP_ASIGNAR_MODULO: '%=';
 
 
 
-DELIMITADOR_BLOQUE: '|';
-FIN_LINEA: ( '\n' | ';' );
-
-fragment COMILLA: '\'';
-
-ENTERO: [0] | ( [1-9] [0-9]* );
-BOOLEANO: ('verdadero'|'falso');
-IDENTIFICADOR: [a-z]+;
-COMENTARIO: '/*' (.)*? '*/' -> skip;
-ESPACIOS_BLANCO : [' '\t\r\n]+ -> skip ;
-
-CARACTER
-	: '\'' (.) '\'' 
-	| ~['\\] 
-	| COMILLA (.) COMILLA
-	;
-
-TEXTO : (CARACTER)+;
-
-
+//FIN_LINEA: ';' ; // '\n'
 
 
 // Nombres de funciones
@@ -270,3 +256,13 @@ TIPO_ENTERO   : 'entero';
 TIPO_CARACTER : 'caracter';
 TIPO_TEXTO    : 'texto';
 TIPO_BOOLEANO : 'booleano';
+
+
+ENTERO: [0] | ( [1-9] [0-9]* );
+BOOLEANO: ('verdadero'|'falso');
+IDENTIFICADOR: [a-z]+;
+COMENTARIO: '/*' (.)*? '*/' -> skip;
+ESPACIOS_BLANCO : [ \t\r\n]+ -> skip ;
+fragment COMILLA: '\'';
+CARACTER : '\''(.)'\'' ;
+TEXTO    : '"'(.)*? '"';
