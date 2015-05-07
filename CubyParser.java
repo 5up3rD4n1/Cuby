@@ -28,8 +28,8 @@ public class CubyParser extends Parser {
 		FUNC_INVERTIR_TEXTO=41, FUNC_ES_LETRA=42, FUNC_ES_DIGITO=43, PARA=44, 
 		REPITA=45, MIENTRAS=46, SI=47, SII=48, SINO=49, DEF=50, SALIR=51, RET=52, 
 		CASO=53, CUANDO=54, SEGUIR=55, VECES=56, HASTA=57, TIPO_ENTERO=58, TIPO_CARACTER=59, 
-		TIPO_TEXTO=60, TIPO_BOOLEANO=61, ENTERO=62, BOOLEANO=63, IDENTIFICADOR=64, 
-		COMENTARIO=65, ESPACIOS_BLANCO=66, CARACTER=67, TEXTO=68;
+		TIPO_TEXTO=60, TIPO_BOOLEANO=61, ESPACIOS_BLANCO=62, ENTERO=63, BOOLEANO=64, 
+		IDENTIFICADOR=65, COMENTARIO=66, CARACTER=67, TEXTO=68;
 	public static final int
 		RULE_expresion = 0, RULE_elemento = 1, RULE_literal = 2, RULE_llamada_funcion = 3, 
 		RULE_entradas = 4, RULE_entrada = 5, RULE_declarar_identificador = 6, 
@@ -53,7 +53,7 @@ public class CubyParser extends Parser {
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "'('", "')'", "','", "':'", "';'", "'.'", "'..'", "'|'", "'~'", 
-		"'%%'", "'$$'", "'=='", "'!='", "'>'", "'<'", "'<='", "'>='", null, "'*'", 
+		"'y'", "'o'", "'=='", "'!='", "'>'", "'<'", "'<='", "'>='", null, "'*'", 
 		"'/'", "'%'", "'+'", null, "'--'", "'++'", "'='", "'-='", "'+='", "'*='", 
 		"'/='", "'%='", "'escribir'", "'principal'", "'aMay'", "'aMin'", "'cae'", 
 		"'eac'", "'eat'", "'tae'", "'longitud'", "'invertir'", "'esLetra?'", "'esDigito?'", 
@@ -74,7 +74,7 @@ public class CubyParser extends Parser {
 		"FUNC_ES_LETRA", "FUNC_ES_DIGITO", "PARA", "REPITA", "MIENTRAS", "SI", 
 		"SII", "SINO", "DEF", "SALIR", "RET", "CASO", "CUANDO", "SEGUIR", "VECES", 
 		"HASTA", "TIPO_ENTERO", "TIPO_CARACTER", "TIPO_TEXTO", "TIPO_BOOLEANO", 
-		"ENTERO", "BOOLEANO", "IDENTIFICADOR", "COMENTARIO", "ESPACIOS_BLANCO", 
+		"ESPACIOS_BLANCO", "ENTERO", "BOOLEANO", "IDENTIFICADOR", "COMENTARIO", 
 		"CARACTER", "TEXTO"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
@@ -406,7 +406,7 @@ public class CubyParser extends Parser {
 			{
 			setState(96);
 			_la = _input.LA(1);
-			if ( !(((((_la - 62)) & ~0x3f) == 0 && ((1L << (_la - 62)) & ((1L << (ENTERO - 62)) | (1L << (IDENTIFICADOR - 62)) | (1L << (CARACTER - 62)) | (1L << (TEXTO - 62)))) != 0)) ) {
+			if ( !(((((_la - 63)) & ~0x3f) == 0 && ((1L << (_la - 63)) & ((1L << (ENTERO - 63)) | (1L << (IDENTIFICADOR - 63)) | (1L << (CARACTER - 63)) | (1L << (TEXTO - 63)))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			} else {
 				consume();
@@ -456,7 +456,7 @@ public class CubyParser extends Parser {
 			match(T__0);
 			setState(101);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << OP_NEGACION) | (1L << ENTERO))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (IDENTIFICADOR - 64)) | (1L << (CARACTER - 64)) | (1L << (TEXTO - 64)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << OP_NEGACION) | (1L << ENTERO))) != 0) || ((((_la - 65)) & ~0x3f) == 0 && ((1L << (_la - 65)) & ((1L << (IDENTIFICADOR - 65)) | (1L << (CARACTER - 65)) | (1L << (TEXTO - 65)))) != 0)) {
 				{
 				setState(100);
 				entradas();
@@ -1058,7 +1058,7 @@ public class CubyParser extends Parser {
 					match(CUANDO);
 					setState(169);
 					_la = _input.LA(1);
-					if ( !(((((_la - 62)) & ~0x3f) == 0 && ((1L << (_la - 62)) & ((1L << (ENTERO - 62)) | (1L << (BOOLEANO - 62)) | (1L << (CARACTER - 62)) | (1L << (TEXTO - 62)))) != 0)) ) {
+					if ( !(((((_la - 63)) & ~0x3f) == 0 && ((1L << (_la - 63)) & ((1L << (ENTERO - 63)) | (1L << (BOOLEANO - 63)) | (1L << (CARACTER - 63)) | (1L << (TEXTO - 63)))) != 0)) ) {
 					_errHandler.recoverInline(this);
 					} else {
 						consume();
@@ -1587,7 +1587,7 @@ public class CubyParser extends Parser {
 			match(T__0);
 			setState(252);
 			_la = _input.LA(1);
-			if ( !(((((_la - 62)) & ~0x3f) == 0 && ((1L << (_la - 62)) & ((1L << (ENTERO - 62)) | (1L << (BOOLEANO - 62)) | (1L << (CARACTER - 62)) | (1L << (TEXTO - 62)))) != 0)) ) {
+			if ( !(((((_la - 63)) & ~0x3f) == 0 && ((1L << (_la - 63)) & ((1L << (ENTERO - 63)) | (1L << (BOOLEANO - 63)) | (1L << (CARACTER - 63)) | (1L << (TEXTO - 63)))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			} else {
 				consume();
@@ -2209,8 +2209,8 @@ public class CubyParser extends Parser {
 		"\3\34\3\34\3\34\3\34\3\34\3\34\3\35\3\35\3\35\3\35\3\35\3\35\3\36\3\36"+
 		"\3\36\3\36\3\36\3\37\7\37\u013f\n\37\f\37\16\37\u0142\13\37\3\37\3\37"+
 		"\3\37\3\37\3\u00a0\3\2 \2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*"+
-		",.\60\62\64\668:<\2\f\3\2\25\26\3\2\30\31\3\2\16\23\5\2@@BBEF\3\2<?\4"+
-		"\2@AEF\3\2\34!\3\2\32\33\4\2@@BB\3\2EF\u014e\2D\3\2\2\2\4`\3\2\2\2\6b"+
+		",.\60\62\64\668:<\2\f\3\2\25\26\3\2\30\31\3\2\16\23\5\2AACCEF\3\2<?\4"+
+		"\2ABEF\3\2\34!\3\2\32\33\4\2AACC\3\2EF\u014e\2D\3\2\2\2\4`\3\2\2\2\6b"+
 		"\3\2\2\2\bd\3\2\2\2\nm\3\2\2\2\fu\3\2\2\2\16w\3\2\2\2\20z\3\2\2\2\22\u008b"+
 		"\3\2\2\2\24\u008d\3\2\2\2\26\u008f\3\2\2\2\30\u00b5\3\2\2\2\32\u00b7\3"+
 		"\2\2\2\34\u00bf\3\2\2\2\36\u00c6\3\2\2\2 \u00e2\3\2\2\2\"\u00e4\3\2\2"+
@@ -2223,11 +2223,11 @@ public class CubyParser extends Parser {
 		"QV\5\2\2\5RS\f\3\2\2ST\7\r\2\2TV\5\2\2\4UF\3\2\2\2UI\3\2\2\2UL\3\2\2\2"+
 		"UO\3\2\2\2UR\3\2\2\2VY\3\2\2\2WU\3\2\2\2WX\3\2\2\2X\3\3\2\2\2YW\3\2\2"+
 		"\2Z[\7\3\2\2[\\\5\2\2\2\\]\7\4\2\2]a\3\2\2\2^a\5\b\5\2_a\5\6\4\2`Z\3\2"+
-		"\2\2`^\3\2\2\2`_\3\2\2\2a\5\3\2\2\2bc\t\5\2\2c\7\3\2\2\2de\7B\2\2eg\7"+
+		"\2\2`^\3\2\2\2`_\3\2\2\2a\5\3\2\2\2bc\t\5\2\2c\7\3\2\2\2de\7C\2\2eg\7"+
 		"\3\2\2fh\5\n\6\2gf\3\2\2\2gh\3\2\2\2hi\3\2\2\2ik\7\4\2\2jl\7\7\2\2kj\3"+
 		"\2\2\2kl\3\2\2\2l\t\3\2\2\2mr\5\f\7\2no\7\5\2\2oq\5\f\7\2pn\3\2\2\2qt"+
 		"\3\2\2\2rp\3\2\2\2rs\3\2\2\2s\13\3\2\2\2tr\3\2\2\2uv\5\2\2\2v\r\3\2\2"+
-		"\2wx\5\24\13\2xy\7B\2\2y\17\3\2\2\2z{\5\16\b\2{|\7\34\2\2|}\5\2\2\2}~"+
+		"\2wx\5\24\13\2xy\7C\2\2y\17\3\2\2\2z{\5\16\b\2{|\7\34\2\2|}\5\2\2\2}~"+
 		"\7\7\2\2~\21\3\2\2\2\177\u008c\5\20\t\2\u0080\u008c\5\30\r\2\u0081\u008c"+
 		"\5&\24\2\u0082\u008c\5(\25\2\u0083\u008c\5,\27\2\u0084\u008c\5.\30\2\u0085"+
 		"\u008c\5\60\31\2\u0086\u008c\5\62\32\2\u0087\u008c\5\64\33\2\u0088\u008c"+
@@ -2243,7 +2243,7 @@ public class CubyParser extends Parser {
 		"\2\2\2\u009e\u0098\3\2\2\2\u009f\u00a2\3\2\2\2\u00a0\u00a1\3\2\2\2\u00a0"+
 		"\u009e\3\2\2\2\u00a1\u00a5\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a3\u00a4\7\63"+
 		"\2\2\u00a4\u00a6\5\"\22\2\u00a5\u00a3\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6"+
-		"\u00b6\3\2\2\2\u00a7\u00a8\7\67\2\2\u00a8\u00a9\7B\2\2\u00a9\u00ad\7\6"+
+		"\u00b6\3\2\2\2\u00a7\u00a8\7\67\2\2\u00a8\u00a9\7C\2\2\u00a9\u00ad\7\6"+
 		"\2\2\u00aa\u00ab\78\2\2\u00ab\u00ac\t\7\2\2\u00ac\u00ae\5\"\22\2\u00ad"+
 		"\u00aa\3\2\2\2\u00ae\u00af\3\2\2\2\u00af\u00ad\3\2\2\2\u00af\u00b0\3\2"+
 		"\2\2\u00b0\u00b3\3\2\2\2\u00b1\u00b2\7\63\2\2\u00b2\u00b4\5\"\22\2\u00b3"+
@@ -2251,8 +2251,8 @@ public class CubyParser extends Parser {
 		"\2\2\u00b5\u00a7\3\2\2\2\u00b6\31\3\2\2\2\u00b7\u00bc\5\34\17\2\u00b8"+
 		"\u00b9\7\5\2\2\u00b9\u00bb\5\34\17\2\u00ba\u00b8\3\2\2\2\u00bb\u00be\3"+
 		"\2\2\2\u00bc\u00ba\3\2\2\2\u00bc\u00bd\3\2\2\2\u00bd\33\3\2\2\2\u00be"+
-		"\u00bc\3\2\2\2\u00bf\u00c0\5\16\b\2\u00c0\35\3\2\2\2\u00c1\u00c2\7B\2"+
-		"\2\u00c2\u00c3\t\b\2\2\u00c3\u00c7\5\2\2\2\u00c4\u00c5\7B\2\2\u00c5\u00c7"+
+		"\u00bc\3\2\2\2\u00bf\u00c0\5\16\b\2\u00c0\35\3\2\2\2\u00c1\u00c2\7C\2"+
+		"\2\u00c2\u00c3\t\b\2\2\u00c3\u00c7\5\2\2\2\u00c4\u00c5\7C\2\2\u00c5\u00c7"+
 		"\t\t\2\2\u00c6\u00c1\3\2\2\2\u00c6\u00c4\3\2\2\2\u00c7\37\3\2\2\2\u00c8"+
 		"\u00c9\7.\2\2\u00c9\u00ca\7\3\2\2\u00ca\u00cb\5\20\t\2\u00cb\u00cc\5\2"+
 		"\2\2\u00cc\u00cd\7\7\2\2\u00cd\u00ce\5\36\20\2\u00ce\u00cf\7\4\2\2\u00cf"+
@@ -2277,7 +2277,7 @@ public class CubyParser extends Parser {
 		"%\2\2\u0109\u010a\7\3\2\2\u010a\u010b\t\13\2\2\u010b\u010c\7\4\2\2\u010c"+
 		"\u010d\7\7\2\2\u010d+\3\2\2\2\u010e\u010f\7&\2\2\u010f\u0110\7\3\2\2\u0110"+
 		"\u0111\7E\2\2\u0111\u0112\7\4\2\2\u0112\u0113\7\7\2\2\u0113-\3\2\2\2\u0114"+
-		"\u0115\7\'\2\2\u0115\u0116\7\3\2\2\u0116\u0117\7@\2\2\u0117\u0118\7\4"+
+		"\u0115\7\'\2\2\u0115\u0116\7\3\2\2\u0116\u0117\7A\2\2\u0117\u0118\7\4"+
 		"\2\2\u0118\u0119\7\7\2\2\u0119/\3\2\2\2\u011a\u011b\7)\2\2\u011b\u011c"+
 		"\7\3\2\2\u011c\u011d\t\13\2\2\u011d\u011e\7\4\2\2\u011e\u011f\7\7\2\2"+
 		"\u011f\61\3\2\2\2\u0120\u0121\7*\2\2\u0121\u0122\7\3\2\2\u0122\u0123\t"+

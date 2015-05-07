@@ -174,8 +174,8 @@ DELIMITADOR_BLOQUE: '|';
 //Operaciones
 
 OP_NEGACION : '~' ;
-OP_AND      : '%%';
-OP_OR       : '$$';
+OP_AND      : 'y' ;
+OP_OR       : 'o' ;
 
 OP_IGUALQUE     : '==';
 OP_DIFERENTEQUE : '!=';
@@ -257,12 +257,15 @@ TIPO_CARACTER : 'caracter';
 TIPO_TEXTO    : 'texto';
 TIPO_BOOLEANO : 'booleano';
 
+ESPACIOS_BLANCO : [ \t\r\n]+ -> skip ;
 
 ENTERO: [0] | ( [1-9] [0-9]* );
 BOOLEANO: ('verdadero'|'falso');
 IDENTIFICADOR: [a-z]+;
+
 COMENTARIO: '/*' (.)*? '*/' -> skip;
-ESPACIOS_BLANCO : [ \t\r\n]+ -> skip ;
+
+
 fragment COMILLA: '\'';
 CARACTER : '\''(.)'\'' ;
 TEXTO    : '"'(.)*? '"';
