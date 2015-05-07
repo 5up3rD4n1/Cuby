@@ -10,7 +10,7 @@ class Cuby {
         if(args.length == 0) {
             println("Debe ingresar el nombre del archivo de entrada (Ej: entrada.etc")
         }else {
-            // Creates an input stream for reading the console input.
+            // Creates an input stream for reading the console input.gg
             ANTLRInputStream input = new ANTLRInputStream(System.in)
 
             // Initialize tucode lexer instance.
