@@ -11,7 +11,8 @@ class CubyErrorListener extends BaseErrorListener {
                             RecognitionException e)
     {
         char invalidChar = msg.charAt(msg.length()-2)
-        System.err.println("Error léxico en la línea: "+line+", Columna: "+charPositionInLine+". Símbolo inválido:  "+
-                "'"+invalidChar+"'")
+        System.err.println(" Error de tipo léxico: el simbolo: "+"'"+invalidChar+"'"+", en la linea:" + line +
+                " columna:"+charPositionInLine+" es una sorpresa para mi."
+                )
     }
 }
