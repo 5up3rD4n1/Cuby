@@ -5,12 +5,15 @@
 import org.antlr.v4.runtime.*;
 
 class Cuby {
-    public static void main(String[] args) throws Exception {
 
+    //Clase metodo principal para ejecutat scanner de antlr4
+    public static void main(String[] args) throws Exception {
+        //Menu para seleccion de modo de entrada
         println("Tipo de entrada: ")
         println("  1- Archivo")
         println("  2- Consola")
         print("-> ")
+        //Archivo leido desde la carpeta donde se ecuentre el a.jar generado
         Scanner reader = new Scanner(System.in)
         int option = reader.nextInt();
         ANTLRInputStream input
@@ -21,25 +24,25 @@ class Cuby {
             input = new ANTLRInputStream(new BufferedReader(new FileReader(new File(filename))))
         }else{
             println("Ingrese el programa de prueba")
-            // Creates an input stream for reading the console input.
+            //Generacion de input para recusos necesarios del antlr
             input = new ANTLRInputStream(System.in)
         }
 
-        // Initialize tucode lexer instance.
+        //Inicializacion del lexer, con metodos sobre escritos para mensajes personalizados
         CubyLexer lexer = new CubyLexer(input)
 
-        // Add a custom error listener to the lexer.
+        //'Servicio; para escuchar y manejar errores.
         lexer.removeErrorListeners()
         lexer.addErrorListener(new CubyErrorListener())
 
-        // Create a buffer of tokens pulled from the lexer.
+        //Se toman todos los tokens reconocidos por el lexer
         CommonTokenStream tokens = new CommonTokenStream(lexer)
 
         tokens.fill()
 
 
 
-        //Iterates trough the buffer of tokens
+        //Ciclo creado para imprimir una lista con todos los token encontrados.
         int tokNumber = 0
         for (Object tok : tokens.getTokens()) {
             if (tokNumber==0){
