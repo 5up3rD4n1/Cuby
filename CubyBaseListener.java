@@ -52,6 +52,54 @@ public class CubyBaseListener implements CubyListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterOperacion_aritmetica(CubyParser.Operacion_aritmeticaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperacion_aritmetica(CubyParser.Operacion_aritmeticaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperacion_unaria(CubyParser.Operacion_unariaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperacion_unaria(CubyParser.Operacion_unariaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperacion_logica(CubyParser.Operacion_logicaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperacion_logica(CubyParser.Operacion_logicaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperacion_relacional(CubyParser.Operacion_relacionalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperacion_relacional(CubyParser.Operacion_relacionalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLlamada_funcion(CubyParser.Llamada_funcionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -59,6 +107,30 @@ public class CubyBaseListener implements CubyListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLlamada_funcion(CubyParser.Llamada_funcionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunciones_predefinidas(CubyParser.Funciones_predefinidasContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunciones_predefinidas(CubyParser.Funciones_predefinidasContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFuncion_por_usuario(CubyParser.Funcion_por_usuarioContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFuncion_por_usuario(CubyParser.Funcion_por_usuarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -88,13 +160,13 @@ public class CubyBaseListener implements CubyListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclarar_identificador(CubyParser.Declarar_identificadorContext ctx) { }
+	@Override public void enterDefinicion_identificador(CubyParser.Definicion_identificadorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclarar_identificador(CubyParser.Declarar_identificadorContext ctx) { }
+	@Override public void exitDefinicion_identificador(CubyParser.Definicion_identificadorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -107,6 +179,18 @@ public class CubyBaseListener implements CubyListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDeclaracion_variable(CubyParser.Declaracion_variableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAsignacion_variable(CubyParser.Asignacion_variableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAsignacion_variable(CubyParser.Asignacion_variableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -136,49 +220,49 @@ public class CubyBaseListener implements CubyListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterResultado(CubyParser.ResultadoContext ctx) { }
+	@Override public void enterDato(CubyParser.DatoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitResultado(CubyParser.ResultadoContext ctx) { }
+	@Override public void exitDato(CubyParser.DatoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCondicional(CubyParser.CondicionalContext ctx) { }
+	@Override public void enterSentencia(CubyParser.SentenciaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCondicional(CubyParser.CondicionalContext ctx) { }
+	@Override public void exitSentencia(CubyParser.SentenciaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParametros(CubyParser.ParametrosContext ctx) { }
+	@Override public void enterSentencia_de_salto(CubyParser.Sentencia_de_saltoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParametros(CubyParser.ParametrosContext ctx) { }
+	@Override public void exitSentencia_de_salto(CubyParser.Sentencia_de_saltoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParametro(CubyParser.ParametroContext ctx) { }
+	@Override public void enterSentencia_condicional(CubyParser.Sentencia_condicionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParametro(CubyParser.ParametroContext ctx) { }
+	@Override public void exitSentencia_condicional(CubyParser.Sentencia_condicionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -196,13 +280,13 @@ public class CubyBaseListener implements CubyListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEstructura_repeticion(CubyParser.Estructura_repeticionContext ctx) { }
+	@Override public void enterSentencia_de_iteracion(CubyParser.Sentencia_de_iteracionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEstructura_repeticion(CubyParser.Estructura_repeticionContext ctx) { }
+	@Override public void exitSentencia_de_iteracion(CubyParser.Sentencia_de_iteracionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -227,6 +311,30 @@ public class CubyBaseListener implements CubyListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDefinir_funcion(CubyParser.Definir_funcionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParametros(CubyParser.ParametrosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParametros(CubyParser.ParametrosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParametro(CubyParser.ParametroContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParametro(CubyParser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -304,6 +412,18 @@ public class CubyBaseListener implements CubyListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLlamada_eat(CubyParser.Llamada_eatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLlamada_eat(CubyParser.Llamada_eatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLlamada_longitud(CubyParser.Llamada_longitudContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -359,6 +479,18 @@ public class CubyBaseListener implements CubyListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFuncion_principal(CubyParser.Funcion_principalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunciones(CubyParser.FuncionesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunciones(CubyParser.FuncionesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
